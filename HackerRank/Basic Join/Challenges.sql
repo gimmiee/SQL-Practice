@@ -13,21 +13,6 @@ Approach:
 - Sort by total challenges (DESC), then hacker_id (ASC)
 */
 
-/*
-Working platform: MySQL
-Purpose: Retrieve hacker details with their total challenge counts,
-         keeping only those with either the maximum count or a unique count.
-
-Approach:
-- Compute total challenges per hacker
-- Calculate frequency of each challenge count
-- Identify the maximum challenge count
-- Filter:
-  * Keep hackers with the maximum count
-  * OR keep hackers whose count appears only once
-- Sort by total challenges (DESC), then hacker_id (ASC)
-*/
-
 WITH hacker_counts AS (
     SELECT 
         h.hacker_id,
